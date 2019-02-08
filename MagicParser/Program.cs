@@ -13,7 +13,8 @@ namespace MagicParser
         static void Main(string[] args)
         {
             var parser = new Parser(new List<IRule> {
-                new WhenRule()
+                new WhenRule(),
+                new EntersRule()
             });
 
             var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
