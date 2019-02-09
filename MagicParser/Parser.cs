@@ -20,17 +20,17 @@ namespace MagicParser
 
         public INode Parse(string text)
         {
-            var lines = text.Split(new string[] { @"\n" }, StringSplitOptions.None);
-            return new RootNode(lines.Select(lineText => ParseImpl(lineText)).ToList());
-        }
-
-        private INode ParseImpl(string text)
-        {
             var applicableRule = Rules.FirstOrDefault(rule => rule.IsApplicableFor(text));
             if (applicableRule == null)
             {
                 throw new ParserException($"Failed to find applicable rule for: {text}");
             }
+            //@@@ HACK
+            if (text.Contains(@"\n"))
+            {
+                applicableRule = Rules.Where(rule => rule.GetType() == typeof(MultilineRule)).First();
+            }
+            //@@@ HACK
             var results = applicableRule.Parse(text);
             if (applicableRule.IsLeafRule())
             {
@@ -38,7 +38,7 @@ namespace MagicParser
             }
             else
             {
-                var nodes = results.Select(result => ParseImpl(result));
+                var nodes = results.Select(result => Parse(result));
                 return new Node(applicableRule, nodes.ToList());
             }
         }
