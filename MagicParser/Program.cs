@@ -45,7 +45,7 @@ namespace MagicParser
                     }
                     break;
                 case LeafNode leafNode:
-                    Console.WriteLine(leafNode.Value);
+                    Console.WriteLine(leafNode.Rule.GetType().Name + ": " + leafNode.Value);
                     break;
             }
         }
