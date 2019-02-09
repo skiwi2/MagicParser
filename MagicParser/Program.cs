@@ -24,13 +24,22 @@ namespace MagicParser
                 new NumberRule(),
                 new ControlsRule(),
                 new SubtypeRule(),
-                new KeywordRule()
+                new KeywordRule(),
+                new UntilEndOfTurnRule(),
+                new DamageThatWouldReduceYourLifeRule()
             });
 
-            var text = @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
+            var texts = new List<string> {
+                //@"Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.",
+                @"Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.",
+                @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control."
+            };
 
-            var node = parser.Parse(text);
-            PrettyPrint(node, 0);
+            foreach (var text in texts)
+            {
+                var node = parser.Parse(text);
+                PrettyPrint(node, 0);
+            }
         }
 
         private static void PrettyPrint(INode node, int indentation)

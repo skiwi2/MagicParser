@@ -8,7 +8,7 @@ namespace MagicParser.Rules
 {
     public class WhenRule : RegexRule
     {
-        public WhenRule() : base(@"^When (.+)\, (.+)\.$", 2)
+        public WhenRule() : base(@"^When (.+?)\, (.+)\.$", 2)
         {
 
         }

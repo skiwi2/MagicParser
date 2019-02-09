@@ -19,7 +19,7 @@ namespace MagicParser.Rules
             MatchCount = matchCount;
         }
 
-        public bool IsLeafRule()
+        public virtual bool IsLeafRule()
         {
             return MatchCount == 1;
         }
@@ -32,7 +32,7 @@ namespace MagicParser.Rules
         public IList<string> Parse(string text)
         {
             var match = RuleRegex.Match(text);
-            if (match.Groups.Count != MatchCount + 1)
+            if (match.Groups.Count - 1 != MatchCount)
             {
                 throw new ParserException($"Expected {MatchCount} matches, but found {match.Groups.Count - 1} matches on text: {text}");
             }

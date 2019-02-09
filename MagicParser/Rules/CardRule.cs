@@ -9,6 +9,7 @@ namespace MagicParser.Rules
     public class CardRule : ListRule
     {
         private static readonly IList<string> Cards = new List<string> {
+            "Angel of Grace",
             "Archway Angel"
         };
 
