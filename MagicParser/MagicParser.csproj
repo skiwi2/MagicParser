@@ -55,6 +55,7 @@
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />
     <Compile Include="Rules\WhenRule.cs" />
+    <Compile Include="Rules\ZoneRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
