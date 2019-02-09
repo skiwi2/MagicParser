@@ -49,7 +49,8 @@
     <Compile Include="ParserException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rules\CardList.cs" />
+    <Compile Include="Rules\CardRule.cs" />
+    <Compile Include="Rules\ControlsRule.cs" />
     <Compile Include="Rules\ForEachRule.cs" />
     <Compile Include="Rules\GainLifeRule.cs" />
     <Compile Include="Rules\ListRule.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\SubtypeRule.cs" />
     <Compile Include="Rules\WhenRule.cs" />
     <Compile Include="Rules\ZoneRule.cs" />
   </ItemGroup>

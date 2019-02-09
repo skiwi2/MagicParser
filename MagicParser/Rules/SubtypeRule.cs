@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class CardList : ListRule
+    public class SubtypeRule : ListRule
     {
-        private static readonly IList<string> Cards = new List<string> {
-            "Archway Angel"
+        private static readonly IList<string> Subtypes = new List<string>
+        {
+            "Gate"
         };
 
-        public CardList() : base(Cards)
+        public SubtypeRule() : base(Subtypes)
         {
 
         }

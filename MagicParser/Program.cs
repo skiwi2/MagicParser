@@ -15,12 +15,14 @@ namespace MagicParser
             var parser = new Parser(new List<IRule> {
                 new WhenRule(),
                 new EntersRule(),
-                new CardList(),
+                new CardRule(),
                 new ZoneRule(),
                 new ForEachRule(),
                 new GainLifeRule(),
                 new PlayerRule(),
-                new NumberRule()
+                new NumberRule(),
+                new ControlsRule(),
+                new SubtypeRule()
             });
 
             var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
