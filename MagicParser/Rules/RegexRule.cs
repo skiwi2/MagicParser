@@ -19,6 +19,11 @@ namespace MagicParser.Rules
             MatchCount = matchCount;
         }
 
+        public bool IsLeafRule()
+        {
+            return false;
+        }
+
         public bool IsApplicableFor(string text)
         {
             return RuleRegex.IsMatch(text);

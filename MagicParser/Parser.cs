@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MagicParser.Nodes;
 using MagicParser.Rules;
 
 namespace MagicParser
@@ -17,7 +18,7 @@ namespace MagicParser
             Rules = rules;
         }
 
-        public Construct Parse(string text)
+        public INode Parse(string text)
         {
             var applicableRule = Rules.FirstOrDefault(rule => rule.IsApplicableFor(text));
             if (applicableRule == null)
@@ -25,8 +26,15 @@ namespace MagicParser
                 throw new ParserException($"Failed to find applicable rule for: {text}");
             }
             var results = applicableRule.Parse(text);
-            var constructs = results.Select(result => Parse(result));
-            return new Construct(applicableRule, constructs.ToList());
+            if (applicableRule.IsLeafRule())
+            {
+                return new LeafNode(applicableRule, results[0]);
+            }
+            else
+            {
+                var nodes = results.Select(result => Parse(result));
+                return new Node(applicableRule, nodes.ToList());
+            }
         }
     }
 }

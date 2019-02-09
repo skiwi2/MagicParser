@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 using MagicParser.Rules;
 
-namespace MagicParser
+namespace MagicParser.Nodes
 {
-    public class Construct
+    public class LeafNode : INode
     {
         public IRule Rule { get; private set; }
 
-        public IList<Construct> Constructs { get; private set; }
+        public string Value { get; private set; }
 
-        public Construct(IRule rule, IList<Construct> constructs)
+        public LeafNode(IRule rule, string value)
         {
             Rule = rule;
-            Constructs = constructs;
+            Value = value;
         }
 
         public override string ToString()
         {
-            return $"{Rule.GetType().Name}({string.Join(", ", Constructs)})";
+            return $"{Rule.GetType().Name}({Value})";
         }
     }
 }

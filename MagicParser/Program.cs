@@ -14,13 +14,14 @@ namespace MagicParser
         {
             var parser = new Parser(new List<IRule> {
                 new WhenRule(),
-                new EntersRule()
+                new EntersRule(),
+                new CardList()
             });
 
             var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
 
-            var construct = parser.Parse(text);
-            Console.WriteLine(construct);
+            var node = parser.Parse(text);
+            Console.WriteLine(node);
         }
     }
 }
