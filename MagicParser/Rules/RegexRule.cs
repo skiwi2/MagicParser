@@ -21,7 +21,7 @@ namespace MagicParser.Rules
 
         public bool IsLeafRule()
         {
-            return false;
+            return MatchCount == 1;
         }
 
         public bool IsApplicableFor(string text)

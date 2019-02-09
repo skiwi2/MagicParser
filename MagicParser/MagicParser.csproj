@@ -51,7 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\CardList.cs" />
     <Compile Include="Rules\ForEachRule.cs" />
+    <Compile Include="Rules\GainLifeRule.cs" />
     <Compile Include="Rules\ListRule.cs" />
+    <Compile Include="Rules\NumberRule.cs" />
+    <Compile Include="Rules\PlayerRule.cs" />
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />

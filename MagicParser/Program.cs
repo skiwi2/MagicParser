@@ -17,7 +17,10 @@ namespace MagicParser
                 new EntersRule(),
                 new CardList(),
                 new ZoneRule(),
-                new ForEachRule()
+                new ForEachRule(),
+                new GainLifeRule(),
+                new PlayerRule(),
+                new NumberRule()
             });
 
             var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
