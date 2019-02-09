@@ -45,6 +45,7 @@
     <Compile Include="Nodes\LeafNode.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\INode.cs" />
+    <Compile Include="Nodes\RootNode.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="ParserException.cs" />
     <Compile Include="Program.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Rules\ControlsRule.cs" />
     <Compile Include="Rules\ForEachRule.cs" />
     <Compile Include="Rules\GainLifeRule.cs" />
+    <Compile Include="Rules\KeywordRule.cs" />
     <Compile Include="Rules\ListRule.cs" />
     <Compile Include="Rules\NumberRule.cs" />
     <Compile Include="Rules\PlayerRule.cs" />

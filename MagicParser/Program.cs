@@ -23,10 +23,11 @@ namespace MagicParser
                 new PlayerRule(),
                 new NumberRule(),
                 new ControlsRule(),
-                new SubtypeRule()
+                new SubtypeRule(),
+                new KeywordRule()
             });
 
-            var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
+            var text = @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
 
             var node = parser.Parse(text);
             PrettyPrint(node, 0);
@@ -37,6 +38,13 @@ namespace MagicParser
             Console.Write(string.Concat(Enumerable.Repeat(" ", indentation)));
             switch (node)
             {
+                case RootNode rootNode:
+                    Console.WriteLine("Root:");
+                    foreach (var childNode in rootNode.Nodes)
+                    {
+                        PrettyPrint(childNode, indentation + 2);
+                    }
+                    break;
                 case Node n:
                     Console.WriteLine(n.Rule.GetType().Name + ":");
                     foreach (var childNode in n.Nodes)
