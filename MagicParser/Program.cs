@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MagicParser.Nodes;
 using MagicParser.Rules;
 
 namespace MagicParser
@@ -28,7 +29,25 @@ namespace MagicParser
             var text = @"When Archway Angel enters the battlefield, you gain 2 life for each Gate you control.";
 
             var node = parser.Parse(text);
-            Console.WriteLine(node);
+            PrettyPrint(node, 0);
+        }
+
+        private static void PrettyPrint(INode node, int indentation)
+        {
+            Console.Write(string.Concat(Enumerable.Repeat(" ", indentation)));
+            switch (node)
+            {
+                case Node n:
+                    Console.WriteLine(n.Rule.GetType().Name + ":");
+                    foreach (var childNode in n.Nodes)
+                    {
+                        PrettyPrint(childNode, indentation + 2);
+                    }
+                    break;
+                case LeafNode leafNode:
+                    Console.WriteLine(leafNode.Value);
+                    break;
+            }
         }
     }
 }
