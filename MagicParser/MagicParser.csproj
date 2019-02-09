@@ -50,6 +50,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\CardList.cs" />
+    <Compile Include="Rules\ForEachRule.cs" />
     <Compile Include="Rules\ListRule.cs" />
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
