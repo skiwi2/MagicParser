@@ -19,6 +19,11 @@ namespace MagicParser.Rules
             MatchCount = matchCount;
         }
 
+        public virtual uint Priority()
+        {
+            return 1;
+        }
+
         public virtual bool IsLeafRule()
         {
             return MatchCount == 1;

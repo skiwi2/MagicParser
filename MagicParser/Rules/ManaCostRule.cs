@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class EntersRule : RegexRule
+    public class ManaCostRule : RegexRule
     {
-        public EntersRule() : base(@"^(.+) enters (.+)$", 2)
+        public ManaCostRule() : base(@"^(\{.+\})$", 1)
         {
 
         }

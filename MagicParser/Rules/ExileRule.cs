@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class EntersRule : RegexRule
+    public class ExileRule : RegexRule
     {
-        public EntersRule() : base(@"^(.+) enters (.+)$", 2)
+        public ExileRule() : base(@"^Exile (.+) from (.+)$", 2)
         {
 
         }

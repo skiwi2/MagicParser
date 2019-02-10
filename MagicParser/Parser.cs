@@ -20,17 +20,11 @@ namespace MagicParser
 
         public INode Parse(string text)
         {
-            var applicableRule = Rules.FirstOrDefault(rule => rule.IsApplicableFor(text));
+            var applicableRule = Rules.OrderByDescending(rule => rule.Priority()).FirstOrDefault(rule => rule.IsApplicableFor(text));
             if (applicableRule == null)
             {
                 throw new ParserException($"Failed to find applicable rule for: {text}");
             }
-            //@@@ HACK
-            if (text.Contains(@"\n"))
-            {
-                applicableRule = Rules.Where(rule => rule.GetType() == typeof(MultilineRule)).First();
-            }
-            //@@@ HACK
             var results = applicableRule.Parse(text);
             if (applicableRule.IsLeafRule())
             {

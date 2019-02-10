@@ -8,6 +8,8 @@ namespace MagicParser.Rules
 {
     public interface IRule
     {
+        uint Priority();
+
         bool IsLeafRule();
 
         bool IsApplicableFor(string text);

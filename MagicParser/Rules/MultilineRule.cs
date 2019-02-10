@@ -8,6 +8,11 @@ namespace MagicParser.Rules
 {
     public class MultilineRule : IRule
     {
+        public uint Priority()
+        {
+            return 2;
+        }
+
         public bool IsLeafRule()
         {
             return false;

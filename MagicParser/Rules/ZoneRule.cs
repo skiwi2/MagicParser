@@ -9,7 +9,8 @@ namespace MagicParser.Rules
     public class ZoneRule : ListRule
     {
         private static readonly IList<string> Zones = new List<string> {
-            "battlefield"
+            "the battlefield",
+            "your graveyard"
         };
 
         public ZoneRule() : base(Zones)

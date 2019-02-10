@@ -15,6 +15,11 @@ namespace MagicParser.Rules
             AlternativesList = alternativesList;
         }
 
+        public virtual uint Priority()
+        {
+            return 1;
+        }
+
         public bool IsLeafRule()
         {
             return true;
