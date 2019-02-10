@@ -10,7 +10,8 @@ namespace MagicParser.Rules
     {
         private static readonly IList<string> Cards = new List<string> {
             "Angel of Grace",
-            "Archway Angel"
+            "Archway Angel",
+            "Sylvan Brushstrider"
         };
 
         public CardRule() : base(Cards)

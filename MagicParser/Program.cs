@@ -37,7 +37,8 @@ namespace MagicParser
 
             var texts = new List<string> {
                 @"Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.",
-                @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control."
+                @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.",
+                @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
             };
 
             foreach (var text in texts)
