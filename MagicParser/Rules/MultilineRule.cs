@@ -10,7 +10,7 @@ namespace MagicParser.Rules
     {
         public uint Priority()
         {
-            return 2;
+            return 4;
         }
 
         public bool IsLeafRule()

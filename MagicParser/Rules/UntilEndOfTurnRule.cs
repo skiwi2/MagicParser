@@ -13,6 +13,11 @@ namespace MagicParser.Rules
 
         }
 
+        public override uint Priority()
+        {
+            return 3;
+        }
+
         public override bool IsLeafRule()
         {
             return false;
