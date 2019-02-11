@@ -8,7 +8,7 @@ namespace MagicParser.Rules
 {
     public class ExileRule : RegexRule
     {
-        public ExileRule() : base(@"^Exile (.+) from (.+)$", 2)
+        public ExileRule() : base(@"^Exile (.+)$", 1)
         {
 
         }

@@ -31,7 +31,7 @@ namespace MagicParser
                 new AbilityRule(),
                 new CostRule(),
                 new ManaCostRule(),
-                new ExileRule(),
+                new ExileFromRule(),
                 new LifeTotalBecomesRule(),
                 new WheneverRule(),
                 new AttacksAloneRule(),
@@ -49,7 +49,11 @@ namespace MagicParser
                 new AddendumRule(),
                 new GainsRule(),
                 new ThatRule(),
-                new SimpleRule()
+                new SimpleRule(),
+                new ExileRule(),
+                new WithRule(),
+                new OrGreaterRule(),
+                new PowerSatisfiesRule()
             });
 
             var texts = new List<string> {
@@ -61,6 +65,8 @@ namespace MagicParser
                 @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.",
                 // Arrester's Zeal
                 @"Target creature gets +2/+2 until end of turn.\nAddendum — If you cast this spell during your main phase, that creature gains flying until end of turn.",
+                // Bring to Trial
+                @"Exile target creature with power 4 or greater.",
                 // Sylvan Brushstrider
                 @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
             };

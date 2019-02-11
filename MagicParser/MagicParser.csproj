@@ -57,6 +57,7 @@
     <Compile Include="Rules\ControlsRule.cs" />
     <Compile Include="Rules\CostRule.cs" />
     <Compile Include="Rules\DamageThatWouldReduceYourLifeRule.cs" />
+    <Compile Include="Rules\ExileFromRule.cs" />
     <Compile Include="Rules\ExileRule.cs" />
     <Compile Include="Rules\ForEachRule.cs" />
     <Compile Include="Rules\GainLifeRule.cs" />
@@ -70,7 +71,9 @@
     <Compile Include="Rules\MultilineRule.cs" />
     <Compile Include="Rules\NumberOfRule.cs" />
     <Compile Include="Rules\NumberRule.cs" />
+    <Compile Include="Rules\OrGreaterRule.cs" />
     <Compile Include="Rules\PlayerRule.cs" />
+    <Compile Include="Rules\PowerSatisfiesRule.cs" />
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />
@@ -86,6 +89,7 @@
     <Compile Include="Rules\WheneverRule.cs" />
     <Compile Include="Rules\WhenRule.cs" />
     <Compile Include="Rules\WhereRule.cs" />
+    <Compile Include="Rules\WithRule.cs" />
     <Compile Include="Rules\ZoneRule.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class NumberRule : RegexRule
+    public class OrGreaterRule : RegexRule
     {
-        public NumberRule() : base(@"^(\d+)$", 1)
+        public OrGreaterRule() : base(@"^(\d+) or greater$", 1)
         {
 
         }
 
-        public override bool IsLeafRule()
+        public override uint Priority()
         {
-            return true;
+            return 0;
         }
     }
 }

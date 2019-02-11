@@ -17,10 +17,5 @@ namespace MagicParser.Rules
         {
             return 3;
         }
-
-        public override bool IsLeafRule()
-        {
-            return false;
-        }
     }
 }

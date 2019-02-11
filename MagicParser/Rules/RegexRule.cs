@@ -31,7 +31,7 @@ namespace MagicParser.Rules
 
         public virtual bool IsLeafRule()
         {
-            return MatchCount == 1;
+            return false;
         }
 
         public bool IsApplicableFor(string text)

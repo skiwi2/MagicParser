@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class NumberRule : RegexRule
+    public class ExileFromRule : RegexRule
     {
-        public NumberRule() : base(@"^(\d+)$", 1)
+        public ExileFromRule() : base(@"^Exile (.+) from (.+)$", 2)
         {
 
-        }
-
-        public override bool IsLeafRule()
-        {
-            return true;
         }
     }
 }
