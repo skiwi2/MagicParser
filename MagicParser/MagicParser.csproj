@@ -50,6 +50,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\AbilityRule.cs" />
+    <Compile Include="Rules\AddendumRule.cs" />
     <Compile Include="Rules\AnyRule.cs" />
     <Compile Include="Rules\AttacksAloneRule.cs" />
     <Compile Include="Rules\CardRule.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Rules\ExileRule.cs" />
     <Compile Include="Rules\ForEachRule.cs" />
     <Compile Include="Rules\GainLifeRule.cs" />
+    <Compile Include="Rules\GainsRule.cs" />
     <Compile Include="Rules\GetsRule.cs" />
     <Compile Include="Rules\IsRule.cs" />
     <Compile Include="Rules\KeywordRule.cs" />
@@ -72,9 +74,12 @@
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\SimpleRule.cs" />
+    <Compile Include="Rules\ThatRule.cs" />
     <Compile Include="Rules\RelativeTargetRule.cs" />
     <Compile Include="Rules\StatModifierRule.cs" />
     <Compile Include="Rules\SubtypeRule.cs" />
+    <Compile Include="Rules\TargetRule.cs" />
     <Compile Include="Rules\TypeRule.cs" />
     <Compile Include="Rules\UntilEndOfTurnRule.cs" />
     <Compile Include="Rules\VariableRule.cs" />

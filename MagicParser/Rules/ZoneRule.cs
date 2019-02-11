@@ -13,7 +13,7 @@ namespace MagicParser.Rules
             "your graveyard"
         };
 
-        public ZoneRule() : base(Zones)
+        public ZoneRule() : base(Zones, false)
         {
 
         }

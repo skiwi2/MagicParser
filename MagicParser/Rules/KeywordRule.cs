@@ -13,7 +13,7 @@ namespace MagicParser.Rules
             "Flash"
         };
 
-        public KeywordRule() : base(Keywords)
+        public KeywordRule() : base(Keywords, false)
         {
 
         }

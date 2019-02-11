@@ -12,7 +12,7 @@ namespace MagicParser.Rules
             "X"
         };
 
-        public VariableRule() : base(Variables)
+        public VariableRule() : base(Variables, true)
         {
 
         }

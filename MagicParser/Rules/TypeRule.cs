@@ -12,7 +12,7 @@ namespace MagicParser.Rules
             "creature"
         };
 
-        public TypeRule() : base(Types)
+        public TypeRule() : base(Types, false)
         {
 
         }

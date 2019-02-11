@@ -13,7 +13,7 @@ namespace MagicParser.Rules
             "you"
         };
 
-        public PlayerRule() : base(Players)
+        public PlayerRule() : base(Players, false)
         {
 
         }

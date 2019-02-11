@@ -14,7 +14,7 @@ namespace MagicParser.Rules
             "Sylvan Brushstrider"
         };
 
-        public CardRule() : base(Cards)
+        public CardRule() : base(Cards, true)
         {
 
         }

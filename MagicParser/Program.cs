@@ -44,7 +44,12 @@ namespace MagicParser
                 new RelativeTargetRule(),
                 new StatModifierRule(),
                 new ZoneRule(),
-                new NumberOfRule()
+                new NumberOfRule(),
+                new TargetRule(),
+                new AddendumRule(),
+                new GainsRule(),
+                new ThatRule(),
+                new SimpleRule()
             });
 
             var texts = new List<string> {
@@ -54,6 +59,8 @@ namespace MagicParser
                 @"Whenever a creature you control attacks alone, it gets +X/+X until end of turn, where X is the number of creatures you control.",
                 // Archway Angel
                 @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.",
+                // Arrester's Zeal
+                @"Target creature gets +2/+2 until end of turn.\nAddendum — If you cast this spell during your main phase, that creature gains flying until end of turn.",
                 // Sylvan Brushstrider
                 @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
             };

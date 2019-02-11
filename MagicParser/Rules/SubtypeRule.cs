@@ -13,7 +13,7 @@ namespace MagicParser.Rules
             "Gate"
         };
 
-        public SubtypeRule() : base(Subtypes)
+        public SubtypeRule() : base(Subtypes, false)
         {
 
         }
