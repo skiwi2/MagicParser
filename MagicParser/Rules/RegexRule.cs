@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class RegexRule : IRule
+    public abstract class RegexRule : IRule
     {
         private IList<Regex> RuleRegexes { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class ListRule : IRule
+    public abstract class ListRule : IRule
     {
         private IList<string> AlternativesList { get; set; }
 
@@ -30,7 +30,6 @@ namespace MagicParser.Rules
 
         public bool IsApplicableFor(string text)
         {
-            //return ContainsText(text);
             return TryGetOriginalText(text, out var _);
         }
 

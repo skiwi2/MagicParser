@@ -54,7 +54,7 @@ namespace MagicParser
                 new WithRule(),
                 new OrGreaterRule(),
                 new PowerSatisfiesRule(),
-                new PluralTypeRule()
+                new AllRule()
             });
 
             var texts = new List<string> {
