@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class UntilEndOfTurnRule : RegexRule
+    public class AttacksAloneRule : RegexRule
     {
-        public UntilEndOfTurnRule() : base(new string[] { @"^until end of turn\, (.+)$", @"^(.+?) until end of turn$" }, 1)
+        public AttacksAloneRule() : base(@"^(.+) attacks alone$", 1)
         {
 
         }

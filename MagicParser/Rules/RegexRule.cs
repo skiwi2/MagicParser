@@ -9,13 +9,18 @@ namespace MagicParser.Rules
 {
     public class RegexRule : IRule
     {
-        private Regex RuleRegex { get; set; }
+        private IList<Regex> RuleRegexes { get; set; }
 
         private uint MatchCount { get; set; }
 
-        public RegexRule(string pattern, uint matchCount)
+        public RegexRule(string pattern, uint matchCount) : this(new List<string> { pattern }, matchCount)
         {
-            RuleRegex = new Regex(pattern, RegexOptions.Compiled);
+            
+        }
+
+        public RegexRule(IList<string> patterns, uint matchCount)
+        {
+            RuleRegexes = patterns.Select(pattern => new Regex(pattern, RegexOptions.Compiled)).ToList();
             MatchCount = matchCount;
         }
 
@@ -31,18 +36,25 @@ namespace MagicParser.Rules
 
         public bool IsApplicableFor(string text)
         {
-            return RuleRegex.IsMatch(text);
+            return RuleRegexes.Any(ruleRegex => ruleRegex.IsMatch(text));
         }
 
         public IList<string> Parse(string text)
         {
-            var match = RuleRegex.Match(text);
-            if (match.Groups.Count - 1 != MatchCount)
+            foreach (var ruleRegex in RuleRegexes)
             {
-                throw new ParserException($"Expected {MatchCount} matches, but found {match.Groups.Count - 1} matches on text: {text}");
+                var match = ruleRegex.Match(text);
+                if (match.Success)
+                {
+                    if (match.Groups.Count - 1 != MatchCount)
+                    {
+                        throw new ParserException($"Expected {MatchCount} matches, but found {match.Groups.Count - 1} matches on text: {text}");
+                    }
+                    // the first group is the complete string, we do not return that one
+                    return match.Groups.Cast<Group>().Skip(1).Select(group => group.Value).ToList();
+                }
             }
-            // the first group is the complete string, we do not return that one
-            return match.Groups.Cast<Group>().Skip(1).Select(group => group.Value).ToList();
+            throw new ParserException($"Found no matching regex for text: {text}");
         }
     }
 }

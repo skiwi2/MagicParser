@@ -32,12 +32,29 @@ namespace MagicParser
                 new CostRule(),
                 new ManaCostRule(),
                 new ExileRule(),
-                new LifeTotalBecomesRule()
+                new LifeTotalBecomesRule(),
+                new WheneverRule(),
+                new AttacksAloneRule(),
+                new AnyRule(),
+                new TypeRule(),
+                new WhereRule(),
+                new VariableRule(),
+                new IsRule(),
+                new GetsRule(),
+                new RelativeTargetRule(),
+                new StatModifierRule(),
+                new ZoneRule(),
+                new NumberOfRule()
             });
 
             var texts = new List<string> {
+                // Angel of Grace
                 @"Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.",
+                // Angelic Exaltation
+                @"Whenever a creature you control attacks alone, it gets +X/+X until end of turn, where X is the number of creatures you control.",
+                // Archway Angel
                 @"Flying\nWhen Archway Angel enters the battlefield, you gain 2 life for each Gate you control.",
+                // Sylvan Brushstrider
                 @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
             };
 
@@ -45,6 +62,7 @@ namespace MagicParser
             {
                 var node = parser.Parse(text);
                 PrettyPrint(node, 0);
+                Console.WriteLine();
             }
         }
 
