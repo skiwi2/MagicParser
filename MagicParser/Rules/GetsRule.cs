@@ -8,7 +8,7 @@ namespace MagicParser.Rules
 {
     public class GetsRule : RegexRule
     {
-        public GetsRule() : base(@"^(.+?) gets (.+)$", 2)
+        public GetsRule() : base(@"^(.+?) gets? (.+)$", 2)
         {
 
         }

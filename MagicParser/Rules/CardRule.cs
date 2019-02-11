@@ -11,6 +11,7 @@ namespace MagicParser.Rules
         private static readonly IList<string> Cards = new List<string> {
             "Angel of Grace",
             "Archway Angel",
+            "Civic Stalwart",
             "Sylvan Brushstrider"
         };
 

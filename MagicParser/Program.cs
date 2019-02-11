@@ -53,7 +53,8 @@ namespace MagicParser
                 new ExileRule(),
                 new WithRule(),
                 new OrGreaterRule(),
-                new PowerSatisfiesRule()
+                new PowerSatisfiesRule(),
+                new PluralTypeRule()
             });
 
             var texts = new List<string> {
@@ -67,8 +68,10 @@ namespace MagicParser
                 @"Target creature gets +2/+2 until end of turn.\nAddendum — If you cast this spell during your main phase, that creature gains flying until end of turn.",
                 // Bring to Trial
                 @"Exile target creature with power 4 or greater.",
+                // Civic Stalwart
+                @"When Civic Stalwart enters the battlefield, creatures you control get +1/+1 until end of turn.",
                 // Sylvan Brushstrider
-                @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
+                @"When Sylvan Brushstrider enters the battlefield, you gain 2 life.",
             };
 
             foreach (var text in texts)

@@ -73,6 +73,7 @@
     <Compile Include="Rules\NumberRule.cs" />
     <Compile Include="Rules\OrGreaterRule.cs" />
     <Compile Include="Rules\PlayerRule.cs" />
+    <Compile Include="Rules\PluralTypeRule.cs" />
     <Compile Include="Rules\PowerSatisfiesRule.cs" />
     <Compile Include="Rules\RegexRule.cs" />
     <Compile Include="Rules\EntersRule.cs" />
