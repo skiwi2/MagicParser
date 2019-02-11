@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class SimpleRule : RegexRule
+    public class UntilYourNextTurnRule : RegexRule
     {
-        public SimpleRule() : base(@"^(.+)\.$", 1)
+        public UntilYourNextTurnRule() : base(@"^until your next turn, (.+)$", 1)
         {
 
         }
 
         public override int Priority()
         {
-            return 2;
+            return 3;
         }
     }
 }

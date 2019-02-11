@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public interface IRule
+    public class PaysRule : RegexRule
     {
-        int Priority();
+        public PaysRule() : base(@"^(.+?) pays (\{.+\})$", 2)
+        {
 
-        bool IsLeafRule();
-
-        bool IsApplicableFor(string text);
-
-        IList<string> Parse(string text);
+        }
     }
 }

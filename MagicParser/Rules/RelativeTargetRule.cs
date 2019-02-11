@@ -10,6 +10,7 @@ namespace MagicParser.Rules
     {
         private static IList<string> RelativeTargets = new List<string> {
             "it",
+            "their controller"
         };
 
         public RelativeTargetRule() : base(RelativeTargets, false)

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class SimpleRule : RegexRule
+    public class UnlessRule : RegexRule
     {
-        public SimpleRule() : base(@"^(.+)\.$", 1)
+        public UnlessRule() : base(@"^(.+?) unless (.+)$", 2)
         {
 
         }

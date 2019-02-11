@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public interface IRule
+    public class ThoseRule : RegexRule
     {
-        int Priority();
+        public ThoseRule() : base(@"^[Tt]hose (.+)$", 1)
+        {
 
-        bool IsLeafRule();
-
-        bool IsApplicableFor(string text);
-
-        IList<string> Parse(string text);
+        }
     }
 }

@@ -11,7 +11,8 @@ namespace MagicParser.Rules
         private static readonly IList<string> Types = new List<string> {
             "creature",
             "artifact",
-            "enchantment"
+            "enchantment",
+            "planeswalker"
         };
 
         public TypeRule() : base(Types, false)

@@ -12,6 +12,7 @@ namespace MagicParser.Rules
             "Angel of Grace",
             "Archway Angel",
             "Civic Stalwart",
+            "Forbidding Spirit",
             "Sylvan Brushstrider"
         };
 

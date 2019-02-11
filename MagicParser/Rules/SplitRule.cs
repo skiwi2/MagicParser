@@ -23,7 +23,7 @@ namespace MagicParser.Rules
             SplitResultTransform = splitResultTransform;
         }
 
-        public virtual uint Priority()
+        public virtual int Priority()
         {
             return 1;
         }

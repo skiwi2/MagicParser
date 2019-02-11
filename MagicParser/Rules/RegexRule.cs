@@ -24,7 +24,7 @@ namespace MagicParser.Rules
             MatchCount = matchCount;
         }
 
-        public virtual uint Priority()
+        public virtual int Priority()
         {
             return 1;
         }

@@ -13,7 +13,7 @@ namespace MagicParser.Rules
 
         }
 
-        public override uint Priority()
+        public override int Priority()
         {
             return 4;
         }

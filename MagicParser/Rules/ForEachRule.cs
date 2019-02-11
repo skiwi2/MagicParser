@@ -8,7 +8,7 @@ namespace MagicParser.Rules
 {
     public class ForEachRule : RegexRule
     {
-        public ForEachRule() : base(@"^(.+) for each (.+)$", 2)
+        public ForEachRule() : base(@"^(.+) for each (?:of )?(.+)$", 2)
         {
 
         }

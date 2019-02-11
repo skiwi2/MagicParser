@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public interface IRule
+    public class CannotAttack : RegexRule
     {
-        int Priority();
+        public CannotAttack() : base(@"^(.+?) can't attack (.+)$", 2)
+        {
 
-        bool IsLeafRule();
-
-        bool IsApplicableFor(string text);
-
-        IList<string> Parse(string text);
+        }
     }
 }
