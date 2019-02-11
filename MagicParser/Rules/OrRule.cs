@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class MultilineRule : SplitRule
+    public class OrRule : RegexRule
     {
-        public MultilineRule() : base(@"\n")
+        public OrRule() : base(@"^(.+?) or (.+)$", 2)
         {
 
         }
 
         public override uint Priority()
         {
-            return 5;
+            return 0;
         }
     }
 }

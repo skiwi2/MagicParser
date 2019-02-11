@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class MultilineRule : SplitRule
+    public class ScryRule : RegexRule
     {
-        public MultilineRule() : base(@"\n")
+        public ScryRule() : base(@"^Scry (\d+)$", 1)
         {
 
-        }
-
-        public override uint Priority()
-        {
-            return 5;
         }
     }
 }

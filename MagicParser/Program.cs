@@ -54,7 +54,11 @@ namespace MagicParser
                 new WithRule(),
                 new OrGreaterRule(),
                 new PowerSatisfiesRule(),
-                new AllRule()
+                new AllRule(),
+                new MultipartRule(),
+                new OrRule(),
+                new DestroyRule(),
+                new ScryRule()
             });
 
             var texts = new List<string> {
@@ -72,6 +76,8 @@ namespace MagicParser
                 @"When Civic Stalwart enters the battlefield, creatures you control get +1/+1 until end of turn.",
                 // Concordia Pegasus
                 @"Flying",
+                // Expose to Daylight
+                @"Destroy target artifact or enchantment. Scry 1.",
                 // Sylvan Brushstrider
                 @"When Sylvan Brushstrider enters the battlefield, you gain 2 life.",
             };

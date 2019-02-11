@@ -9,7 +9,9 @@ namespace MagicParser.Rules
     public class TypeRule : ListRule
     {
         private static readonly IList<string> Types = new List<string> {
-            "creature"
+            "creature",
+            "artifact",
+            "enchantment"
         };
 
         public TypeRule() : base(Types, false)
