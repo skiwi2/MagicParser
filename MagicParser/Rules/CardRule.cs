@@ -13,6 +13,7 @@ namespace MagicParser.Rules
             "Archway Angel",
             "Civic Stalwart",
             "Forbidding Spirit",
+            "Haazda Officer",
             "Sylvan Brushstrider"
         };
 

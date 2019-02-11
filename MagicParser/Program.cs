@@ -85,6 +85,8 @@ namespace MagicParser
                 @"Destroy target artifact or enchantment. Scry 1.",
                 // Forbidding Spirit
                 @"When Forbidding Spirit enters the battlefield, until your next turn, creatures can't attack you or a planeswalker you control unless their controller pays {2} for each of those creatures.",
+                // Haazda Officer
+                @"When Haazda Officer enters the battlefield, target creature you control gets +1/+1 until end of turn.",
                 // Sylvan Brushstrider
                 @"When Sylvan Brushstrider enters the battlefield, you gain 2 life."
             };
