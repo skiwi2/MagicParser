@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagicParser.Rules
 {
-    public class AddendumRule : RegexRule
+    public class KeywordAbilityRule : RegexRule
     {
-        public AddendumRule() : base(@"^Addendum — If you cast this spell during your main phase, (.+).$", 1)
+        public KeywordAbilityRule() : base(new string[] { @"^(Addendum) — (?:.+), (.+)\.$", @"^(Scry) (\d+)$" }, 2)
         {
 
         }

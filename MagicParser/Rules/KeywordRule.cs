@@ -9,8 +9,10 @@ namespace MagicParser.Rules
     public class KeywordRule : ListRule
     {
         private static readonly IList<string> Keywords = new List<string> {
+            "Addendum",
+            "Flash",
             "Flying",
-            "Flash"
+            "Scry"
         };
 
         public KeywordRule() : base(Keywords, false)

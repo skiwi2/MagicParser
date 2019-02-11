@@ -46,7 +46,6 @@ namespace MagicParser
                 new ZoneRule(),
                 new NumberOfRule(),
                 new TargetRule(),
-                new AddendumRule(),
                 new GainsRule(),
                 new ThatRule(),
                 new SimpleRule(),
@@ -58,12 +57,12 @@ namespace MagicParser
                 new MultipartRule(),
                 new OrRule(),
                 new DestroyRule(),
-                new ScryRule(),
                 new UntilYourNextTurnRule(),
                 new CannotAttack(),
                 new UnlessRule(),
                 new PaysRule(),
-                new ThoseRule()
+                new ThoseRule(),
+                new KeywordAbilityRule()
             });
 
             var texts = new List<string> {

@@ -50,7 +50,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\AbilityRule.cs" />
-    <Compile Include="Rules\AddendumRule.cs" />
     <Compile Include="Rules\AllRule.cs" />
     <Compile Include="Rules\AnyRule.cs" />
     <Compile Include="Rules\AttacksAloneRule.cs" />
@@ -67,6 +66,7 @@
     <Compile Include="Rules\GainsRule.cs" />
     <Compile Include="Rules\GetsRule.cs" />
     <Compile Include="Rules\IsRule.cs" />
+    <Compile Include="Rules\KeywordAbilityRule.cs" />
     <Compile Include="Rules\KeywordRule.cs" />
     <Compile Include="Rules\LifeTotalBecomesRule.cs" />
     <Compile Include="Rules\ListRule.cs" />
@@ -84,7 +84,6 @@
     <Compile Include="Rules\EntersRule.cs" />
     <Compile Include="Rules\IRule.cs" />
     <Compile Include="Rules\ReplacementRule.cs" />
-    <Compile Include="Rules\ScryRule.cs" />
     <Compile Include="Rules\SimpleRule.cs" />
     <Compile Include="Rules\SplitRule.cs" />
     <Compile Include="Rules\ThatRule.cs" />
