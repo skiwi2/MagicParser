@@ -42,8 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LexerException.cs" />
+    <Compile Include="MagicLexer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokens\ActionToken.cs" />
+    <Compile Include="Tokens\IToken.cs" />
+    <Compile Include="Tokens\KeywordToken.cs" />
+    <Compile Include="Tokens\NumberToken.cs" />
+    <Compile Include="Tokens\PlayerToken.cs" />
+    <Compile Include="Tokens\PunctuationToken.cs" />
+    <Compile Include="Tokens\ResourceToken.cs" />
+    <Compile Include="Tokens\SubtypeToken.cs" />
+    <Compile Include="Tokens\ThisToken.cs" />
+    <Compile Include="Tokens\Token.cs" />
+    <Compile Include="Tokens\TriggeredAbilityToken.cs" />
+    <Compile Include="Tokens\ZoneToken.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
