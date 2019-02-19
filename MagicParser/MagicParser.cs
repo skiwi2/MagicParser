@@ -105,11 +105,6 @@ namespace MagicParser
             return Parse(GetTokensUpTillToken(enumerator, token => token == targetToken, matchMandatory).GetEnumerator());
         }
 
-        private INode ParseUpTillTokenWithType(IEnumerator<IToken> enumerator, Type targetTokenType, bool matchMandatory)
-        {
-            return Parse(GetTokensUpTillToken(enumerator, token => token.GetType() == targetTokenType, matchMandatory).GetEnumerator());
-        }
-
         private INode ParseUpTillEnd(IEnumerator<IToken> enumerator)
         {
             return Parse(GetTokensUpTillToken(enumerator, token => false, false).GetEnumerator());
