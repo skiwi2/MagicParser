@@ -18,5 +18,10 @@ namespace MagicParser.Tokens
         {
             Text = text;
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(KeywordToken)}({Text})";
+        }
     }
 }
