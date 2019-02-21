@@ -19,14 +19,14 @@ namespace MagicParser.Nodes
 
         public void PrettyPrint(uint indentation, Action<uint, string> printer)
         {
-            printer(indentation, nameof(ConstantNode<T>));
+            printer(indentation, $"{nameof(ConstantNode<T>)}<{Token.GetType().Name}>");
             printer(indentation + 1, nameof(Token));
             printer(indentation + 2, Token.Text);
         }
 
         public override string ToString()
         {
-            return $"{nameof(ConstantNode<T>)}({Token})";
+            return $"{nameof(ConstantNode<T>)}<{Token.GetType().Name}>({Token})";
         }
     }
 }

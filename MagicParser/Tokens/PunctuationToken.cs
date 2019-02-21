@@ -11,9 +11,10 @@ namespace MagicParser.Tokens
         public static readonly PunctuationToken Space = new PunctuationToken(" ");
         public static readonly PunctuationToken Comma = new PunctuationToken(",");
         public static readonly PunctuationToken Dot = new PunctuationToken(".");
+        public static readonly PunctuationToken Slash = new PunctuationToken("/");
         public static readonly PunctuationToken NewLine = new PunctuationToken(@"\n");
 
-        public static readonly IList<PunctuationToken> All = new List<PunctuationToken> { Space, Comma, Dot, NewLine };
+        public static readonly IList<PunctuationToken> All = new List<PunctuationToken> { Space, Comma, Dot, Slash, NewLine };
 
         public string Text { get; private set; }
 

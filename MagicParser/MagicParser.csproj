@@ -47,19 +47,24 @@
     <Compile Include="MagicParser.cs" />
     <Compile Include="Nodes\ActionNode.cs" />
     <Compile Include="Nodes\ConstantNode.cs" />
+    <Compile Include="Nodes\ContinuousEffectNode.cs" />
     <Compile Include="Nodes\ControlsNode.cs" />
     <Compile Include="Nodes\ForEachNode.cs" />
     <Compile Include="Nodes\INode.cs" />
     <Compile Include="Nodes\MultilineNode.cs" />
     <Compile Include="Nodes\ResourceNode.cs" />
+    <Compile Include="Nodes\StatModifierNode.cs" />
     <Compile Include="Nodes\TriggeredAbilityNode.cs" />
     <Compile Include="ParserException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tokens\ActionToken.cs" />
+    <Compile Include="Tokens\ContinuousEffectToken.cs" />
     <Compile Include="Tokens\IToken.cs" />
     <Compile Include="Tokens\KeywordToken.cs" />
+    <Compile Include="Tokens\ModifierToken.cs" />
     <Compile Include="Tokens\NumberToken.cs" />
+    <Compile Include="Tokens\PhaseToken.cs" />
     <Compile Include="Tokens\PlayerToken.cs" />
     <Compile Include="Tokens\PunctuationToken.cs" />
     <Compile Include="Tokens\ResourceToken.cs" />
@@ -67,6 +72,7 @@
     <Compile Include="Tokens\ThisToken.cs" />
     <Compile Include="Tokens\Token.cs" />
     <Compile Include="Tokens\TriggeredAbilityToken.cs" />
+    <Compile Include="Tokens\TypeToken.cs" />
     <Compile Include="Tokens\ZoneToken.cs" />
   </ItemGroup>
   <ItemGroup>

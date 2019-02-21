@@ -10,8 +10,9 @@ namespace MagicParser.Tokens
     {
         public static readonly ActionToken Enters = new ActionToken("enters");
         public static readonly ActionToken Gains = new ActionToken("gain");
+        public static readonly ActionToken Gets = new ActionToken("get");
 
-        public static readonly IList<ActionToken> All = new List<ActionToken> { Enters, Gains };
+        public static readonly IList<ActionToken> All = new List<ActionToken> { Enters, Gains, Gets };
 
         public string Text { get; private set; }
 

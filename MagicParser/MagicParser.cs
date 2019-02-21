@@ -24,6 +24,11 @@ namespace MagicParser
 
         private INode Parse(IEnumerator<IToken> enumerator)
         {
+            return Parse(enumerator, _ => false);
+        }
+
+        private INode Parse(IEnumerator<IToken> enumerator, Predicate<INode> earlyReturnPredicate)
+        {
             var stack = new Stack<INode>();
             while (enumerator.MoveNext())
             {
@@ -38,6 +43,20 @@ namespace MagicParser
                         }
                     case PunctuationToken punctuationToken when (punctuationToken == PunctuationToken.Space):
                         {
+                            break;
+                        }
+                    case PunctuationToken punctuationToken when (punctuationToken == PunctuationToken.Slash):
+                        {
+                            var power = stack.Pop();
+                            var toughness = Parse(enumerator, node => node is ConstantNode<IToken> constantNode && constantNode.Token is ModifierToken);
+                            stack.Push(new StatModifierNode(power, toughness));
+                            break;
+                        }
+                    case ContinuousEffectToken continuousEffectToken:
+                        {
+                            var action = stack.Pop();
+                            var phase = ParseUpTillEnd(enumerator);
+                            stack.Push(new ContinuousEffectNode(phase, action));
                             break;
                         }
                     case TriggeredAbilityToken triggeredAbilityToken:
@@ -75,10 +94,13 @@ namespace MagicParser
                             break;
                         }
                     case KeywordToken keywordToken:
+                    case ModifierToken modifierToken:
                     case NumberToken numberToken:
+                    case PhaseToken phaseToken:
                     case PlayerToken playerToken:
                     case SubtypeToken subtypeToken:
                     case ThisToken thisToken:
+                    case TypeToken typeToken:
                     case ZoneToken zoneToken:
                         {
                             stack.Push(new ConstantNode<IToken>(enumerator.Current));
@@ -88,6 +110,10 @@ namespace MagicParser
                         {
                             throw new ParserException($"Unexpeced node {enumerator.Current} encountered");
                         }
+                }
+                if (stack.Count == 1 && earlyReturnPredicate(stack.Peek()))
+                {
+                    return stack.Pop();
                 }
             }
             if (stack.Count == 1)
